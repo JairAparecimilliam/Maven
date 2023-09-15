@@ -16,6 +16,9 @@ public class Programa {
 		/*
 		 * para apagar uma pessoa do banco de dados em.remove(p);
 		 */
+		em.getTransaction().begin();
+		em.remove(p);
+		em.getTransaction().commit();
 		System.out.println(p);
 		System.out.println("OK");
 		em.close();
